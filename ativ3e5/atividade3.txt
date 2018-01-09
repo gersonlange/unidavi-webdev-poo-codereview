@@ -1,0 +1,134 @@
+resgate e pesquisa de definições e exemplos
+	- é um mecanismo da Orientação a Objeto que permite criar novas classes a partir de classes já existentes, aproveitando-se das características existentes na classe a ser estendida;
+	- com a herança é possível criar classes derivadas, subclasses, a partir de classes bases, superclasses
+	- as subclasses são mais especializadas do que as suas superclasses, mais genérica
+	
+	Exemplo:
+		public class Conta {
+			private String codigoBanco, banco, codigoConta, correntista;
+			private StringBuilder extrato = new StringBuilder();
+			private double saldo;
+
+			public String getCodigoBanco() {
+				return codigoBanco;
+			}
+
+			public void setCodigoBanco(String codigoBanco) {
+				this.codigoBanco = codigoBanco;
+			}
+
+			public String getBanco() {
+				return banco;
+			}
+
+			public void setBanco(String banco) {
+				this.banco = banco;
+			}
+
+			public String getCodigoConta() {
+				return codigoConta;
+			}
+
+			public void setCodigoConta(String codigoConta) {
+				this.codigoConta = codigoConta;
+			}
+
+			public String getCorrentista() {
+				return correntista;
+			}
+
+			public void setCorrentista(String correntista) {
+				this.correntista = correntista;
+			}
+
+			public void addDeposito(double valor) {
+				movimento(valor, "Deposito");
+			}
+
+			public void addSaque(double valor) {
+				movimento(-valor, "Saque");
+			}
+
+			public String getExtrato() {
+				return extrato.toString();
+			}
+
+			public double getSaldo() {
+				return saldo;
+			}
+
+			protected void movimento(double valor, String descricao) {
+				saldo += valor;
+
+				extrato.append(descricao);
+				extrato.append(" de :");
+				extrato.append(valor);
+				extrato.append("\n");
+			}
+
+		}
+
+		public class ContaCorrente extends Conta {
+
+			private double limiteEspecial;
+			
+			public void setLimiteEspecial(double limiteEspecial) {
+				this.limiteEspecial = limiteEspecial;
+			}
+
+			public double getLimiteEspecial() {
+				return limiteEspecial;
+			}	
+		}
+		
+
+		public class Poupanca extends Conta {
+
+			public void addRendimento(double rendimento) {
+				movimento(rendimento,  "Rendimento");
+			}
+		}
+
+	
+• atualização da ferramenta para verificação
+	1) reuso de implementação:
+	2) acesso protegido:
+	3) tipo de herança:
+	4) métodos para sobrescrever:
+	5) acesso privilegiado a métodos da hierarquia:
+
+• verificação de 5 classes do JSE ou de repositório Github
+	Classe 1) TelaDashboard.java:
+		1) reuso de implementação: sim
+		2) acesso protegido: sim
+		3) tipo de herança: subclasse
+		4) métodos para sobrescrever: não
+		5) acesso privilegiado a métodos da hierarquia: não
+
+	Classe 2) Totalizador.java:
+		1) reuso de implementação: sim
+		2) acesso protegido: sim
+		3) tipo de herança: subclasse
+		4) métodos para sobrescrever: sim
+		5) acesso privilegiado a métodos da hierarquia: sim
+
+	Classe 3) Processando.java:
+		1) reuso de implementação: sim
+		2) acesso protegido: sim
+		3) tipo de herança: subclasse
+ 		4) métodos para sobrescrever: sim
+		5) acesso privilegiado a métodos da hierarquia: não
+
+	Classe 4) SubMenu.java
+		1) reuso de implementação: sim
+		2) acesso protegido: sim
+		3) tipo de herança: subclasse
+		4) métodos para sobrescrever: sim
+		5) acesso privilegiado a métodos da hierarquia: sim
+
+	Classe 5) Fundo.java
+		1) reuso de implementação: sim
+		2) acesso protegido: sim
+		3) tipo de herança: subclasse
+		4) métodos para sobrescrever: sim
+		5) acesso privilegiado a métodos da hierarquia: sim
