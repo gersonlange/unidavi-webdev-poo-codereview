@@ -1,0 +1,107 @@
+• Resgate e pesquisa de definições e exemplos
+	1) significa juntar o programa em partes, o mais isoladas possível;
+	2) torna o software mais flexível, fácil de modificar e de criar novas implementações;
+	3) permite que toda parte encapsulada possa ser modificada sem afetar as demais partes do software;
+	4) é uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde esta classe poderá ser manipulada.
+
+	Exemplo:
+		public class Funcionario {
+			private double salario;
+			private String nome;
+
+			public String getNome() {
+				return nome;
+			}
+
+			public Funcionario setNome(String nome) {
+				this.nome = nome;
+				return this;
+			}
+			
+			public Funcionario setSalario(double salario) {
+				this.salario = salario;
+				return this;
+			}
+			
+			public double getSalario() {
+				return salario;
+			}
+		}
+
+		public class TestaFuncionario {
+
+			public static void main(String[] args) {
+				Funcionario funcionario_1 = new Funcionario()
+					.setNome("Romário")
+					.setSalario(100);
+				System.out.println(funcionario_1.getNome());
+				System.out.println(funcionario_1.getSalario());
+
+				Funcionario funcionario_2 = new Funcionario()
+					.setNome("Carlos")
+					.setSalario(200);
+				System.out.println(funcionario_2.getNome());
+				System.out.println(funcionario_2.getSalario());
+			}
+		}
+
+• elaboração de ferramenta para verificação
+	1) abstração, coesão
+	2) associação, composição, dependência
+	3) delegação
+	4) níveis de acesso
+
+• verificação de 5 classes do JSE ou de repositório Github
+	Classe 1) TelaDashboard.java:
+		1) abstração, coesão
+			abstração: sim
+			coesão: sim
+		2) associação, composição, dependência
+			associação: sim
+			composição: sim
+		3) delegação: sim
+		4) níveis de acesso: sim
+
+	Classe 2) Totalizador.java:
+		1) abstração, coesão
+			abstração: sim
+			coesão: sim
+		2) associação, composição, dependência
+			associação: não
+			composição: sim
+			dependência: sim
+		3) delegação: sim
+		4) níveis de acesso: sim
+
+	Classe 3) Processando.java:
+		1) abstração, coesão
+			abstração: sim, mas existe alguns pontos a serem melhorados
+			coesão: sim
+		2) associação, composição, dependência
+			associação: não
+			composição: sim
+			dependência: sim
+		3) delegação: sim
+		4) níveis de acesso: sim
+
+	Classe 4) SubMenu.java
+		1) abstração, coesão
+			abstração: sim
+			coesão: sim
+		2) associação, composição, dependência
+			associação: sim
+			composição: não
+			dependência: sim
+		3) delegação: sim
+		4) níveis de acesso: não
+
+	Classe 5) Fundo.java
+		1) abstração, coesão
+			abstração: sim
+			coesão: sim
+		2) associação, composição, dependência
+			associação: não
+			composição: sim
+			dependência: sim
+		3) delegação: sim
+		4) níveis de acesso: sim
