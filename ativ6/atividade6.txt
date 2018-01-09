@@ -1,0 +1,29 @@
+Classe 1) Animal.java:
+	1) sobrecarga: não
+	2) sobrescrita: não
+	3) de inclusão: não
+	4) paramétrico: não
+
+Classe 2) Cachorro.java:
+	1) sobrecarga: não
+	2) sobrescrita: não
+	3) de inclusão: sim
+	4) paramétrico: não
+
+Classe 3) Gato.java:
+	1) sobrecarga: não
+	2) sobrescrita: não
+	3) de inclusão: sim
+	4) paramétrico: não
+
+Classe 4) Cliente.java
+	1) sobrecarga: não
+	2) sobrescrita: não
+	3) de inclusão: não
+	4) paramétrico: não
+
+Classe 5) Raca.java
+	1) sobrecarga: não
+	2) sobrescrita: não
+	3) de inclusão: não
+	4) paramétrico: não

@@ -1,0 +1,27 @@
+
+Classe 1) Conta.java
+	1) reuso de implementação: não
+	2) acesso protegido: sim
+	3) tipo de herança: superclasse
+	4) métodos para sobrescrever: não
+	5) acesso privilegiado a métodos da hierarquia: não
+
+Classe 2) ContaCorrente.java
+	1) reuso de implementação: não
+	2) acesso protegido: sim
+	3) tipo de herança: subclasse
+	4) métodos para sobrescrever: sim
+	5) acesso privilegiado a métodos da hierarquia: não
+
+Classe 3) Poupanca.java
+	1) reuso de implementação: sim
+	2) acesso protegido: não
+	3) tipo de herança: subclasse
+	4) métodos para sobrescrever: não
+	5) acesso privilegiado a métodos da hierarquia: sim
+	
+Classe 4) Movimento.java
+	1) reuso de implementação: não
+	2) acesso protegido: não
+	3) métodos para sobrescrever: não
+	4) acesso privilegiado a métodos da hierarquia: não
